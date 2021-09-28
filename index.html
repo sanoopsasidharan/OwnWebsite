@@ -591,8 +591,8 @@
             <form action="" id="submit-form" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="surname" placeholder="Your Name"  maxlength="10" >
-                  <p class="valid-alert" id="name-alert">please enter without number</p>
+                  <input type="text" name="name" class="form-control"  id="surname" placeholder="Your Name"  maxlength="15" >
+                  <p class="valid-alert" id="name-alert"> </p>
                   <p id="namelength"></p>
                 
                   
@@ -603,8 +603,8 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" >
-               
+                <input type="text" class="form-control" name="subject" onkeyup="this.value=this.value.replace(/[^\d]/,'')" maxlength="10" id="subject" placeholder="Number" >
+                <p class="number-alert" id="number-alert"> </p>
               </div>
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message"  maxlength="40" ></textarea>
